@@ -1,0 +1,38 @@
+{
+  "name": "cordova-plugin-unionpay-pay",
+  "version": "1.0",
+  "cordova_name": "Unionpay",
+  "description": "Cordova Unionpay Plugin",
+  "license": "MIT",
+  "author": "Vicent",
+  "cordova": {
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "pay",
+    "unionpay",
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vicent900527/cordova-plugin-payment.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vicent900527/cordova-plugin-payment/issues"
+  },
+  "homepage": "git+https://github.com/vicent900527/cordova-plugin-payment.git#readme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

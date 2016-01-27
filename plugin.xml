@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-unionpay"
+		version="1.0.0">
+
+    <name>Unionpay</name>
+    <description>Cordova Unionpay Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,unionpay</keywords>
+
+	<engines>
+		<engine name="cordova" version=">=3.0.0"/>
+	</engines>
+
+    <js-module src="www/unionpay.js" name="unionpay">
+        <clobbers target="unionpay" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Unionpay">
+                <param name="android-package" value="com.yonyou.plugin.UnionpayPlugin"/>
+            </feature>
+        </config-file>
+
+		<!--配置activity-->
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.unionpay.UPPayWapActivity"
+            android:configChanges="orientation|keyboardHidden|fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+    </config-file>
+
+		<!--添加权限-->
+		<config-file target="AndroidManifest.xml" parent="/*">
+			<uses-permission android:name="android.permission.INTERNET" />
+	    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+	    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+	    <uses-permission android:name="android.permission.NFC" />
+			<uses-feature android:name="android.hardware.nfc.hce"/>
+    </config-file>
+
+		<!--编译-->
+		<source-file src="src/android/libs/UPPayAssistEx.jar" target-dir="libs" framework="true" />
+		<source-file src="src/android/libs/UPPayPluginExPro.jar" target-dir="libs" framework="true" />
+		<source-file src="src/android/libs/armeabi/libentryexpro.so" target-dir="libs/armeabi" framework="true" />
+		<source-file src="src/android/libs/armeabi/libuptsmaddon.so" target-dir="libs/armeabi" framework="true" />
+		<source-file src="src/android/libs/armeabi-v7a/libentryexpro.so" target-dir="libs/armeabi-v7a" framework="true" />
+		<source-file src="src/android/libs/armeabi-v7a/libuptsmaddon.so" target-dir="libs/armeabi-v7a" framework="true" />
+		<source-file src="src/android/libs/armeabi-x86/libentryexpro.so" target-dir="libs/armeabi-x86" framework="true" />
+		<source-file src="src/android/libs/armeabi-x86/libuptsmaddon.so" target-dir="libs/armeabi-x86" framework="true" />
+
+    <source-file src="src/android/RSAUtil.java" target-dir="src/com/yonyou/plugin" />
+    <source-file src="src/android/UnionpayPlugin.java" target-dir="src/com/yonyou/plugin" />
+
+    </platform>
+
+</plugin>
