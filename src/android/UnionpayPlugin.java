@@ -20,7 +20,7 @@ import com.unionpay.UPPayAssistEx;
  * @author Vicent
  *
  */
-public class UnionPayPlugin extends CordovaPlugin  {
+public class UnionpayPlugin extends CordovaPlugin  {
 
 	public static final int PLUGIN_VALID = 0;
     public static final int PLUGIN_NOT_INSTALLED = -1;

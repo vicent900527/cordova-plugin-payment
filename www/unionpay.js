@@ -16,7 +16,7 @@ cordova.define("cordova/plugins/Unionpay",function(require, exports, module) {
 
 		}
 
-		exec(successCallback, errorCallback, 'Unionpay', 'unionpay', [{"trade_code":out_trade_no, "payMode": mode}]);
+		exec(successCallback, errorCallback, 'Unionpay', 'unionpay', [{"trade_code":trade_code, "payMode": mode}]);
 
 	};
 
@@ -27,4 +27,4 @@ cordova.define("cordova/plugins/Unionpay",function(require, exports, module) {
 
 if(!window.plugins) window.plugins = {};
 
-if (!window.plugins.Alipay) window.plugins.Unionpay = cordova.require("cordova/plugins/Unionpay");
+if (!window.plugins.Unionpay) window.plugins.Unionpay = cordova.require("cordova/plugins/Unionpay");

@@ -59,8 +59,8 @@
 		<source-file src="src/android/libs/armeabi/libuptsmaddon.so" target-dir="libs/armeabi" framework="true" />
 		<source-file src="src/android/libs/armeabi-v7a/libentryexpro.so" target-dir="libs/armeabi-v7a" framework="true" />
 		<source-file src="src/android/libs/armeabi-v7a/libuptsmaddon.so" target-dir="libs/armeabi-v7a" framework="true" />
-		<source-file src="src/android/libs/armeabi-x86/libentryexpro.so" target-dir="libs/armeabi-x86" framework="true" />
-		<source-file src="src/android/libs/armeabi-x86/libuptsmaddon.so" target-dir="libs/armeabi-x86" framework="true" />
+		<source-file src="src/android/libs/x86/libentryexpro.so" target-dir="libs/x86" framework="true" />
+		<source-file src="src/android/libs/x86/libuptsmaddon.so" target-dir="libs/x86" framework="true" />
 
     <source-file src="src/android/RSAUtil.java" target-dir="src/com/yonyou/plugin" />
     <source-file src="src/android/UnionpayPlugin.java" target-dir="src/com/yonyou/plugin" />
