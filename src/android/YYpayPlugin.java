@@ -73,6 +73,7 @@ public class YYpayPlugin extends CordovaPlugin  {
 
 
 	private void startUnionPay(String code){
+		cordova.setActivityResultCallback(this);
 		int ret = UPPayAssistEx.startPay(cordova.getActivity(), null, null, code, mMode);
         if (ret == PLUGIN_NEED_UPGRADE || ret == PLUGIN_NOT_INSTALLED) {
             AlertDialog.Builder builder = new AlertDialog.Builder(cordova.getActivity());
@@ -150,8 +151,14 @@ public class YYpayPlugin extends CordovaPlugin  {
             msg = "用户取消了支付";
             code = -2;
         }
-        String result = String.format("{'code':%s,'msg':%s}",code , msg);
-        callback.success(result);
+        JSONObject json = new JSONObject();
+        try {
+        	json.put("code", code);
+        	json.put("msg", msg);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+        callback.success(json);
     }
 
 }
