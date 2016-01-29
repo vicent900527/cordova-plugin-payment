@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-unionpay"
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-yypay"
 		version="1.0.0">
 
-    <name>Unionpay</name>
-    <description>Cordova Unionpay Plugin</description>
+    <name>yypay</name>
+    <description>Cordova yypay Plugin</description>
     <license>Apache 2.0</license>
-    <keywords>cordova,unionpay</keywords>
+    <keywords>cordova,yypay</keywords>
 
 	<engines>
 		<engine name="cordova" version=">=3.0.0"/>
 	</engines>
 
-    <js-module src="www/unionpay.js" name="unionpay">
-        <clobbers target="unionpay" />
+    <js-module src="www/yypay.js" name="yypay">
+        <clobbers target="yypay" />
     </js-module>
 
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="Unionpay">
-                <param name="android-package" value="com.yonyou.plugin.UnionpayPlugin"/>
+            <feature name="YYpay">
+                <param name="android-package" value="com.yonyou.plugin.YYpayPlugin"/>
             </feature>
         </config-file>
 
@@ -62,8 +62,10 @@
 		<source-file src="src/android/libs/x86/libentryexpro.so" target-dir="libs/x86" framework="true" />
 		<source-file src="src/android/libs/x86/libuptsmaddon.so" target-dir="libs/x86" framework="true" />
 
+		<source-file src="src/android/assets/data.bin" target-dir="assets" framework="true" />
+
     <source-file src="src/android/RSAUtil.java" target-dir="src/com/yonyou/plugin" />
-    <source-file src="src/android/UnionpayPlugin.java" target-dir="src/com/yonyou/plugin" />
+    <source-file src="src/android/YYpayPlugin.java" target-dir="src/com/yonyou/plugin" />
 
     </platform>
 

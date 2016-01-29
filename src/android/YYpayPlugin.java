@@ -20,7 +20,7 @@ import com.unionpay.UPPayAssistEx;
  * @author Vicent
  *
  */
-public class UnionpayPlugin extends CordovaPlugin  {
+public class YYpayPlugin extends CordovaPlugin  {
 
 	public static final int PLUGIN_VALID = 0;
     public static final int PLUGIN_NOT_INSTALLED = -1;
@@ -32,7 +32,7 @@ public class UnionpayPlugin extends CordovaPlugin  {
 
 	public boolean execute(String action , JSONArray args , CallbackContext callbackContext) {
 
-		if (action.equals("unionpay")) {	// 支付动作
+		if (action.equals("unionpay")) {	// 银联支付动作
 
 			try {
 
